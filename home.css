@@ -1,0 +1,298 @@
+/* ===== Global Styles ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(to bottom, #1A0D2E, #2C1A5B);
+    color: #FFFFFF;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+    overflow-x: hidden;
+    min-height: 100vh;
+}
+
+/* ===== Navigation Bar ===== */
+.navbar {
+    background-color: rgba(26, 13, 46, 0.9);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+}
+
+.nav-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5rem;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 1rem 2rem;
+}
+
+.nav-item {
+    position: relative;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #FFFFFF;
+    font-size: 1.1em;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #9000F0;
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+    list-style: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: rgba(26, 13, 46, 0.95);
+    border-radius: 4px;
+    min-width: 150px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    display: none;
+}
+
+.dropdown-menu li {
+    padding: 0.75rem 1.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.dropdown-menu li:last-child {
+    border-bottom: none;
+}
+
+.dropdown-menu a {
+    color: #B0B0B0;
+    display: block;
+    text-decoration: none;
+    font-size: 0.95em;
+    transition: color 0.3s ease;
+}
+
+.dropdown-menu a:hover {
+    color: #9000F0;
+}
+
+.dropdown.open .dropdown-menu {
+    display: block;
+}
+
+/* ===== Hero Section ===== */
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    padding: 140px 2rem 120px;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.logo {
+    width: 180px;
+    margin: 0 auto 2rem;
+    display: block;
+}
+
+.hero-title {
+    font-size: 3rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+}
+
+.hero-text {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    color: #E0E0E0;
+}
+
+/* ===== Buttons ===== */
+.btn {
+    display: inline-block;
+    background-color: #9000F0;
+    color: #FFFFFF;
+    padding: 1rem 2.5rem;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+}
+
+.btn:hover {
+    background-color: #7000C0;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(144, 0, 240, 0.4);
+}
+
+/* ===== Main Content Section ===== */
+.main-content {
+    padding: 4rem 2rem;
+}
+
+.content-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Sliding Images */
+.sliding-images {
+    background-color: #350B61;
+    height: 200px;
+    width: 100%;
+    margin: 0 auto 3rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Info Container */
+.info-container {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.benefits-card,
+.apply-card {
+    background-color: rgba(44, 26, 91, 0.8);
+    padding: 2.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+}
+
+.benefits-card {
+    flex: 1;
+    min-width: 300px;
+    max-width: 500px;
+}
+
+.apply-card {
+    flex: 0 1 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+
+/* Benefits List */
+.benefits-list {
+    list-style: none;
+    padding: 0;
+}
+
+.benefits-list li {
+    padding: 0.75rem 0;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.benefits-list li::before {
+    content: "→ ";
+    color: #9000F0;
+    font-weight: bold;
+    margin-right: 0.5rem;
+}
+
+/* ===== Footer ===== */
+.footer {
+    background-color: rgba(26, 13, 46, 0.9);
+    text-align: center;
+    padding: 3rem 2rem;
+    margin-top: 4rem;
+}
+
+.footer-text {
+    font-size: 1rem;
+    color: #E0E0E0;
+}
+
+.footer-link {
+    color: #9000F0;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-weight: 600;
+}
+
+.footer-link:hover {
+    color: #7000C0;
+    text-decoration: underline;
+}
+
+/* ===== Responsive Design ===== */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .hero-text {
+        font-size: 1rem;
+    }
+
+    .nav-list {
+        gap: 1.5rem;
+        padding: 0.75rem 1rem;
+    }
+
+    .nav-link {
+        font-size: 1em;
+    }
+
+    .info-container {
+        flex-direction: column;
+    }
+
+    .benefits-card,
+    .apply-card {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 1.5rem;
+    }
+
+    .logo {
+        width: 140px;
+    }
+
+    .btn {
+        padding: 0.875rem 2rem;
+        font-size: 1rem;
+    }
+}
