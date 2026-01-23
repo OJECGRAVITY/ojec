@@ -286,6 +286,12 @@ button {
   box-shadow: 0 4px 12px rgba(124, 58, 237, 0.4);
 }
 
+.btn-next:active,
+.btn-submit:active {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 6px rgba(124, 58, 237, 0.3);
+}
+
 .btn-back {
   background: transparent;
   border: 2px solid var(--accent-purple);
@@ -298,6 +304,10 @@ button {
   transform: translateY(-2px);
 }
 
+.btn-back:active {
+  transform: translateY(-1px);
+}
+
 button:disabled {
   background: var(--text-secondary);
   cursor: not-allowed;
@@ -308,6 +318,29 @@ button:disabled {
 
 button:active:not(:disabled) {
   transform: translateY(0);
+}
+
+/* Submit Button Specific Styling */
+.btn-submit {
+  font-weight: 700;
+  letter-spacing: 1px;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, var(--accent-purple) 0%, var(--accent-hover) 100%);
+}
+
+.btn-submit:hover {
+  background: linear-gradient(135deg, var(--accent-hover) 0%, #5a1a92 100%);
+  box-shadow: 0 6px 20px rgba(124, 58, 237, 0.5);
+}
+
+.btn-submit:active {
+  box-shadow: 0 2px 8px rgba(124, 58, 237, 0.4);
+}
+
+.btn-submit:disabled {
+  background: linear-gradient(135deg, var(--text-secondary) 0%, #888888 100%);
+  box-shadow: none;
 }
 
 /* Loading Spinner */
@@ -489,6 +522,11 @@ footer a:hover {
   margin-top: 1rem;
   font-size: 0.875rem;
   opacity: 0.8;
+}
+
+/* Hidden Elements */
+.hidden-iframe {
+  display: none;
 }
 
 /* Responsive Design */
